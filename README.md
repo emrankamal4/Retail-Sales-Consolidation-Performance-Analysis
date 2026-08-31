@@ -1,38 +1,39 @@
-# Retail Sales Consolidation & Performance Analysis
+# Retail Sales Consolidation & Analysis
 
 ## 📌 Business Scenario
 
 A beverage supplier receives sales reports separately from four major retail partners: **Costco, Target, Walgreens, and Walmart**.
 
-Each retailer maintains its own Excel file, which creates a common reporting problem: management needs to compare overall performance, but the information is scattered across multiple files.
+Each retailer provides its own Excel report, making it difficult to get a single view of overall sales performance. Instead of manually combining these files, the goal was to create a repeatable process that consolidates the data and prepares it for analysis.
 
-The goal of this project was to **consolidate the four retailer files into a single analysis-ready dataset**, standardize the information, and create a management-level view of sales performance.
+The main business questions were:
 
-The business questions were:
-
-* How much revenue did the company generate overall?
-* Which beverage brands generate the most revenue?
-* Which retailer contributes the most to sales?
-* Which region performs best?
+* How much revenue is being generated overall?
+* Which beverage brands perform best?
+* Which retailers contribute the most revenue?
+* Which regions and states perform best?
 * How does revenue change throughout the year?
-* How are sales distributed across retailers and beverage brands?
 
-Rather than analyzing each source independently, I treated the four files as one reporting pipeline — similar to how an analyst would consolidate recurring reports from multiple business partners.
+---
+
+## 🎯 Project Objective
+
+Build a consolidated retail sales dataset from four separate Excel files using **Power Query**, then use the combined data to produce business-focused analysis and reporting.
+
+The project focuses on creating a workflow that could easily be reused when new retailer reports are received.
 
 ---
 
 ## 🛠️ Tools & Techniques
 
-**Microsoft Excel**
-
-* Power Query
-* Data transformation and consolidation
+* **Microsoft Excel**
+* **Power Query**
 * Excel Tables
+* Data Cleaning & Transformation
+* Data Consolidation
 * PivotTables
-* Excel formulas
-* Data analysis and reporting
-* KPI development
-* Data visualization
+* Excel Formulas
+* Data Visualization
 
 ---
 
@@ -40,81 +41,78 @@ Rather than analyzing each source independently, I treated the four files as one
 
 ```text
 Costco.xlsx
-       │
 Target.xlsx
-       │
 Walgreens.xlsx  ───► Power Query ───► Consolidated Dataset
-       │
 Walmart.xlsx
-                         │
-                         ▼
-                 Analysis & Reporting
-                         │
-             ┌───────────┼───────────┐
-             ▼           ▼           ▼
-         KPIs       PivotTables    Charts
+                              │
+                              ▼
+                        Data Analysis
+                              │
+                  ┌───────────┼───────────┐
+                  ▼           ▼           ▼
+                KPIs      PivotTables    Charts
 ```
 
-The four retailer files were combined into a single dataset while retaining the original source information.
-
-This made it possible to analyze the business as a whole instead of maintaining four disconnected reports.
+The four retailer files were imported and combined through Power Query while preserving the retailer information needed for comparison and analysis.
 
 ---
 
 ## 📊 Dataset
 
-The consolidated dataset contains **288 records** across:
+The final consolidated dataset contains **288 records** across:
 
-* **4 retail partners:** Costco, Target, Walgreens, Walmart
-* **6 beverage brands:** Coca-Cola, Diet Coke, Sprite, Fanta, Powerade, Dasani Water
-* **3 regions:** Northeast, South, West
-* **3 states:** New York, Texas, California
-* **12 months of sales activity**
+* **4 Retailers:** Costco, Target, Walgreens, Walmart
+* **6 Beverage Brands:** Coca-Cola, Diet Coke, Sprite, Fanta, Powerade, Dasani Water
+* **3 Regions:** Northeast, South, West
+* **3 States:** New York, Texas, California
+* **12 Months of Sales Data**
+
 
 ## 📈 Analysis Performed
 
-The workbook provides a consolidated view of sales performance through:
+The consolidated dataset was used to analyze sales performance across several dimensions:
 
-### Executive KPIs
+### Revenue Analysis
 
-* Total Revenue
-* Total Orders
-* Average Order Value
-* Total Units Sold
-* Top Beverage Brand
-* Top Region
-* Top Retailer
-* Top State
+* Total revenue
+* Monthly revenue trends
+* Revenue by beverage brand
+* Revenue by retailer
+* Revenue by region/state
 
+### Sales Performance
+
+* Total units sold
+* Total orders
+* Average order value
+* Brand performance comparison
+* Retailer performance comparison
+
+The analysis was designed around practical business questions rather than creating separate reports for every available field.
 
 
 ## 🎯 Business Value
 
-The purpose of this project was not simply to combine four Excel files.
+The main value of this project is not simply the final charts.
 
-The consolidation creates a **single source for sales reporting** that allows management to compare retailers, products, regions, and time periods without manually opening and analyzing each retailer's file.
+The project demonstrates how multiple independent retailer reports can be turned into a **single analysis-ready dataset** using Power Query.
 
-This type of workflow could be reused whenever new monthly retailer files arrive, reducing repetitive manual reporting and making cross-retailer analysis much easier.
+Instead of manually opening, copying, and combining four Excel files, the process creates a more efficient and repeatable reporting workflow.
+
+This approach could be reused whenever updated retailer files are received, making future reporting faster and more consistent.
 
 
 ## 🚀 What This Project Demonstrates
 
-This project demonstrates my ability to:
+This project demonstrates practical experience with:
 
-**Collect → Transform → Consolidate → Analyze → Communicate**
+* Combining multiple Excel data sources using Power Query
+* Cleaning and transforming raw business data
+* Building a consolidated dataset for analysis
+* Creating KPIs and summary metrics
+* Analyzing sales across retailers, products, regions, and time
+* Turning operational spreadsheets into useful business reporting
 
-More specifically, it shows practical experience with:
+### Core Workflow
 
-* Combining data from multiple Excel sources
-* Building a repeatable Power Query workflow
-* Working with structured retail sales data
-* Creating business-focused KPIs
-* Analyzing sales across multiple dimensions
-* Using PivotTables and formulas to answer business questions
-* Turning raw operational files into management-ready reporting
-
----
-
-## 👤 About
-
-Built as a practical data analytics project to strengthen my skills in **Excel, Power Query, data transformation, and business-oriented reporting**.
+**Multiple Excel Sources → Power Query → Consolidated Data → Analysis → Business Reporting**
